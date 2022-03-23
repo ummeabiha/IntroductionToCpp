@@ -31,8 +31,12 @@ int main()
 
     // camelCase Notation:
     int marksInMaths = 83;
-    cout << "The marks in math is: " << marksInMaths << endl
-         << endl;
+    cout << "The marks in math is: " << marksInMaths << endl;
+         
+    return 0;
+    >>
+         
+         
 
     // TAKING USER INPUT AND AIRTHEMATIC OPERATORS:
     int a, b;
