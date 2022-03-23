@@ -1,0 +1,51 @@
+#include <iostream>
+using name space std;
+   
+int main()  
+   {
+   // IF,ELSE IF,ELSE:
+
+    int age;
+    cout << "Enter your age: ";
+    cin >> age;
+
+    if (age >= 18)
+    {
+        cout << "You can VOTE";
+    }
+    else if (age > 110)
+    {
+        cout << "Invalid age";
+    }
+
+    else
+    {
+        cout << "You cannot VOTE";
+    }
+    cout << endl
+         << endl;
+
+    // SWITCH STATEMENT
+
+    int age1;
+    cout << "Enter your age: ";
+    cin >> age1;
+
+    switch (age1)
+    {
+    case 12:
+        cout << "You are 12 years old" << endl;
+        break;
+        //if we will not add break then it will execute all the cases below
+
+    case 18:
+        cout << "You are 18 years old" << endl;
+        break;
+
+    default:
+        cout << "You are neither 12 nor 18 years old" << endl<< endl;
+    
+    }
+    
+    return 0;
+    >>
