@@ -6,39 +6,94 @@ int main()
   // LOOPS (WHILE, DO WHILE AND FOR LOOP):
     
     // while:
-    int index=0;
-    while(index<34)
-    {
-        cout<<"We are at index number "<<index<<endl;
-        index=index+1;
 
+    /* Syntax of While Loop:
+    while(condition)
+    {
+        loop body(C++ code);
+    }
+    */
+
+    int index = 0;
+    while (index < 34)
+    {
+        cout << "We are at index number " << index << endl;
+        index = index + 1;
     }
 
-    cout<<endl<<endl;
-    
+    cout << endl;
+
     // do while (will execute atleast once, no matter if the condition is true or not):
+
+    /* Syntax of do-while Loop:
+    
+    do
+    {
+        C++ code;
+    }
+    
+    while(condition)
+    {
+        loop body(C++ code)
+    }
+    */
 
     do
     {
-        cout<<"We are at index number "<<index<<endl;
-        index=index+1;
+        cout << "\nWe are at index number " << index << endl;
+        index = index + 1;
 
     }
 
-while (index>3538);
-{
-        cout<<"We are at index number "<<index<<endl;
-        index=index+1;
-}
+    while (index > 3538);
+    {
+        cout << "We are at index number " << index << endl;
+        index = index + 1;
+    }
 
-cout<<endl<<endl;
-    
+    cout << endl;
+
     // for loop:
+    
+    /* Syntax of For Loop:
+    for(initialization;condition;updation)
+    {
+        loop body(C++ code);
+    }
+    */
+    
     for (int i = 0; i <= 34; i++)
     {
-        cout<<"The value of i is: "<<i <<endl;
+        cout << "\nThe value of i is: " << i << endl;
     }
+
     
+
+    // Generating Table:
+    int i = 1;
+    int num;
+    cout<<"Enter the number "<<endl;
+    cin>>num;
+    
+    //   do while
+    do
+    {
+        cout << num <<" * " << i << " = " << (num * i) << endl;
+        i++;
+    } while (i <= 10);
+
+    // for loop
+    for (i = 1; i <= 10; i++)
+    {
+        cout << num << " * " << i << " = " << (num * i) << endl;
+    }
+
+    // while loop
+    while (i <= 10)
+    {
+        cout << num << " * " << i << " = " << (num * i) << endl;
+        i++;
+    }
 
     return 0;
 }
