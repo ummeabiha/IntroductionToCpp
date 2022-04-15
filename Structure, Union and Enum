@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+
+// Structure:
+typedef struct employee    //typedef is added only to assign the struct employee as ep
+    {                      //we can also write struct employee only
+        /* data */           
+        int emp_id;   //4   //will take 9 bytes of memory.
+        char favChar; //1
+        float salary; //4
+        
+    } ep;
+    
+// Union:
+union money          //if we want to use any 1 of the datatype/variable instead of all 3, we use union. 
+{                    //for e.g. here we will only use 1 variable at a time.. if we use int rice then we 
+    /* data */       //will not use char car.
+    int rice;      //4      //will take only 4 bytes of memory in union.for e.g.if we have used
+    char car;      //1      //rice and now we want to use car then the value of rice will 
+    float pounds;  //4      //over write with the value of car in the memory location
+};
+
+
+int main()
+{
+    // structure
+    ep harry;   //can use ep instead of struct employee (shortcut)
+    struct employee shubam;
+ 
+    harry.emp_id =1;
+    harry.favChar= 'c';
+    harry.salary= 1200000;
+
+    cout<< "The salary is "<<harry.salary <<endl;
+    cout<< "The emp_id is "<<harry.emp_id <<endl;
+    cout<< "The favorite character is "<<harry.favChar <<endl;
+
+    // union
+    union money m1;
+    m1.rice= 34;
+    m1.car= 'c';
+    cout<< m1.rice<<endl;   //will generate garbage value
+    cout<< m1.car<<endl;
+
+    // enum
+    enum Meal{breakfast,lunch,dinner};   
+    /*Meal has become a datatype and we can store values in it as 0,1,2,3,----
+    for e.g. breakfast has become 0 */
+    Meal m= breakfast;
+    cout<<"brakfast is" << m <<endl ;
+    
+    cout<<breakfast<<endl ;
+    cout<<lunch<<endl ;
+    cout<<dinner<<endl ;
+
+    return 0;
+}
