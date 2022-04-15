@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+// Function prototype:
+// type function-name(arguments):
+
+int sum(int a,int b);  //acceptable
+int sum(int,int);      //acceptable
+// int sum(int a,int); //not acceptable
+void greet();
+
+int main()
+{
+    //num1 and num2 are actual parameters
+    //formal and actual parameters can have the same name
+    int num1,num2;    
+    cout<<"Enter first number"<<endl;
+    cin>>num1;
+    cout<<"Enter second number"<<endl;
+    cin>>num2;
+    cout<<"The sum is "<<sum(num1,num2)<<endl;  
+
+    greet();
+
+    return 0;
+}
+
+int sum(int a,int b)
+{
+    //a and b are formal parameters (takes value from actual i.e.num1,num2)
+    int c= a+b;
+    return c;
+}
+
+void greet()       //void doesnot take/return any parameter  
+{
+    cout<<"\nHello, Good Morning";
+}
