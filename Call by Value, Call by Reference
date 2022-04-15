@@ -1,0 +1,71 @@
+#include <iostream>
+using namespace std;
+
+int sum(int a,int b)
+{
+    int c = a + b ;
+    return c;
+}
+
+// This will not swap a and b:
+// The value of x and y gets copied to a and b, so it will not affect the original data!!
+void swap(int a,int b)
+{
+    int temp = a;
+    a=b;
+    b=temp;
+}
+
+// Call By Reference using Pointers:
+void swappointer(int* a,int* b)
+{
+    int temp = *a;
+    *a=*b;
+    *b=temp;
+}
+
+// Call By Reference using C++ Reference Variables:
+// actual arguments can be changed using this.
+void swapreference(int &a,int &b)
+{
+    int temp = a;
+    a=b;
+    b=temp;
+}
+
+// Return By Reference:
+int & swaprereference(int &a,int &b)
+{
+    int temp = a;
+    a=b;
+    b=temp;
+    return a;
+}
+
+
+
+int main()
+{
+    int x=4 ,y=5;
+    cout<<"The sum of 4 and 5 is "<< sum(x,y)<<endl;
+    
+    // No Swapping:
+    swap(x,y);
+    cout<<"The value of x is "<< x << " The value of y is "<<y<<endl;
+    
+    // Swapping Using Pointer Variables:
+    // address sy wo variable ki value ko find krky change krdy ga.
+    swappointer(&x,&y);  
+    cout<<"The value of x is "<< x << " The value of y is "<<y<<endl;
+    
+    // Swapping Using Reference Variables:
+    swapreference(x,y);  
+    cout<<"The value of x is "<< x << " The value of y is "<<y<<endl;
+
+    // Return By Reference:
+    swaprereference(x,y)=766;  
+    cout<<"The value of x is "<< x << " The value of y is "<<y<<endl;
+ 
+ 
+    return 0;
+}
