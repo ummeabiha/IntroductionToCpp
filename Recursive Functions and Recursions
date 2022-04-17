@@ -1,0 +1,54 @@
+#include <iostream>
+using namespace std;
+
+// RECURSIVE FUNCTIONS:
+
+// factorial
+int factorial(int n)
+{
+    // base condition to stop the repeatition of function:
+    if (n<=1)
+    {
+        return 1;
+    }
+    return n*factorial(n-1);
+}
+
+/*
+step by step explanation of factorial 4:
+factorial(4)= 4*factorial(3)
+factorial(4)= 4*3*factorial(2)
+factorial(4)= 4*3*2*factorial(1)
+factorial(4)= 4*3*2*1
+factorial(4)= 1
+*/
+
+
+//fibonacci
+int fibonacci(int num)
+{
+    if(num<2)
+    {
+        return 1 ;
+    }
+    
+    return fibonacci(num-2)+fibonacci(num-1) ;
+}
+
+
+int main()
+{
+    // factorial
+    int a;
+    cout<<"Enter a number "<<endl;
+    cin>> a;
+    cout<<"The factorial of "<<a << " is "<<factorial(a)<<endl;
+
+    //fibonacci
+    int b;
+    cout<<"Enter a number "<<endl;
+    cin>> b;
+    cout<<"The term in fibonacci sequence at position "<<b << " is "<<fibonacci(b)<<endl;
+
+    return 0;
+}
