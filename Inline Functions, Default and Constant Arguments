@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace std;
+
+// STATIC VARIABLES:
+int staticvar(int x, int y)
+{
+    static int z = 0; // this will execute only once
+    z = z + 1;        // next time this function is run, the value of c will be retained.
+    return x * y + z;
+}
+
+// INLINE FUNCTIONS:
+inline int product(int a, int b)
+{
+    return a * b;
+}
+
+// DEFAULT ARGUMENTS:
+
+//the default arguments should always be defined at the end(at extreme right)!!
+float moneyReceived(float currentMoney, float factor = 1.04) 
+{
+    return currentMoney * factor;
+}
+
+// CONSTANT ARGUMENTS:
+// int strlen(const char *p)
+
+
+int main()
+{
+    // INLINE FUNCTIONS:
+    int a, b;
+    cout << "Enter the value of a and b" << endl;
+    cin >> a >> b;
+    cout << "The product of a and b is " << product(a, b) << endl;
+
+    
+    // DEFAULT ARGUMENTS:
+    int money = 100000;
+    cout << "If you have " << money << " Rs in your bank account,you will receive "
+         << moneyReceived(money) << " Rs after one year" << endl;
+
+    cout << "FOR VIP: If you have " << money << " Rs in your bank account,you will receive "
+         << moneyReceived(money, 1.1) << " Rs after one year";
+
+    return 0;
+}
