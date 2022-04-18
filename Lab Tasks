@@ -172,3 +172,108 @@ int main()
     return 0;
 }
 
+=================================================8===============================================
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    float firstNumber;
+    float secondNumber;
+    float temp;
+
+    cout << "Enter the first number" << endl;
+    cout << "Then hit enter" << endl;
+    cin >> firstNumber;
+
+    cout << "Enter the second number" << endl;
+    cout << "Then hit enter" << endl;
+    cin >> secondNumber;
+ 
+    cout << endl<< "You input the numbers as " << firstNumber << " and " << secondNumber << endl;
+
+    temp= firstNumber;
+    firstNumber = secondNumber;
+    secondNumber= temp;
+
+    cout << "After swapping, the values of the two numbers are " 
+    << firstNumber << " and " << secondNumber << endl;
+    return 0;
+}
+================================== 9 ============================================
+#include <iostream>
+using namespace std;
+
+const string FAVORITESODA = "Dr. Dolittle";
+const char BESTRATING = 'A';
+
+int main()
+{
+    char rating;
+    string favoriteSnack;
+    int numberOfPeople;
+    int topChoiceTotal;
+
+    favoriteSnack = "crackers";
+    rating = 'B';
+    numberOfPeople = 250;
+    topChoiceTotal = 148;
+
+    cout << "The preferred soda is " << FAVORITESODA << endl;
+    cout << "The preferred snack is " << favoriteSnack << endl;
+    cout << "Out of " << topChoiceTotal << " people " << numberOfPeople << " chose these items!" << endl;
+    cout << "Each of these products were given a rating of " << BESTRATING;
+    cout << " from our expert tasters" << endl;
+    cout << "The other products were rated no higher than a " << rating << endl;
+    return 0;
+}
+====================================== 10 =====================================
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    float number;
+    int divider;
+    divider = 2;
+    cout << "Hi there" << endl;
+    cout << "Please input a number and then hit return" << endl;
+    cin >> number;
+    number = number / divider;
+    cout << "Half of your number is " << number << endl;
+
+    return 0;
+}
+==================================== 11 =======================================
+#include <iostream>
+using namespace std;
+
+const int length = 8;
+const int width = 3;
+
+int main()
+{
+    int area;
+    int perimeter;
+
+    perimeter = 2 * (length + width);
+    area = length * width;
+
+    cout << "The perimeter of the rectangle is " << perimeter << endl;
+    cout << "The area of the rectangle is " << area << endl;
+    return 0;
+}
+====================================12 ======================================
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout << "***********" << endl;
+    cout <<"   Programmer: Syeda Umm E Abiha Rizvi" << endl;
+    cout << "               Block-7 Gulistane Johar" << endl;
+    cout << "               Karachi,Pakistan 75290" << endl;
+    cout << "\n\n   Telephone:  123-456-789" << endl;
+    cout << "***********" << endl;
+    return 0;
+}
